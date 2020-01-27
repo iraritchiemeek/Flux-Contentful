@@ -16,9 +16,9 @@ export const StyledHeader = styled.header`
 			max-width: ${spacing.maxContentWidth};
 		}
 	}
+	background-color: ${color.fluxPurple};
 	padding: 0 15px;
 	box-sizing: border-box;
-	box-shadow: inset 0 -1px 0 0px rgba(0, 0, 0, 0.1);
 	nav {
 		padding: 8px 0;
 		margin: 0 auto;
@@ -34,15 +34,16 @@ export const NavItem = styled.li`
 	padding: .8em;
 	text-align: center;
 	a, a:visited, a:active {
-		font-size: 16px;
-		color: ${color.lightGrey};
+		font-size: .9rem;
+		font-weight: 500;
+		color: white;
 		text-decoration: none;
 	}
 	a:hover {
-		color: black;
+		color: #ea1e68;
 	}
 	a.active {
-		color: black;
+		color: #ea1e68;
 	}
 `
 
@@ -140,8 +141,10 @@ export const Section = styled.section`
 	background: ${props => !props.color ? 'none' : props.color == 'purple' ? 'linear-gradient(#5f259f 20%, #f7aac6 150%)' : ''};
 `
 
-
-
+export const Wrap = styled.div`
+	max-width: 92%;
+	margin: 0 auto;
+`
 
 
 

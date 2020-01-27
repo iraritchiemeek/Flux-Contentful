@@ -20,3 +20,10 @@ export const QuoteAuthor = styled(NoSpaceP)`
 	font-style: italic;
     padding: 0 ${spacing.betweenItemSpace}em;
 `
+
+export const IntroP = styled.p`
+	font-size: 1.25rem;
+    line-height: 1.6rem;
+    color: white;
+    margin-top: 1.5rem;
+`

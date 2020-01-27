@@ -6,15 +6,14 @@ import { createGlobalStyle } from "styled-components"
 import { color, spacing, device } from "../styled-components/variables"
 import { VerticalSpace } from '../styled-components/layout'
 import Masthead from '../components/masthead'
-import "typeface-open-sans"
+import "typeface-rubik"
 
 const GlobalStyle = createGlobalStyle`
   body, html {
     width: 100%;
     height: 100%;
     margin: 0;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
+    font-family: "rubik",Helvetica,Arial,sans-serif;    font-weight: 300;
     max-width: 100%;
     box-sizing: border-box;
   } 
@@ -35,6 +34,7 @@ const GlobalStyle = createGlobalStyle`
     letter-spacing: 0.01em;
     line-height: 1.7em;
     margin: 0 0 1.2em 0;
+    font-weight: 300;
   }
   h1, h2, h3, p {
     text-align: center;
@@ -46,6 +46,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: 3.4rem;
     margin: 0;
     color: white;
+    font-weight: 300;
   }
   h2 {
     font-size: 25px;
