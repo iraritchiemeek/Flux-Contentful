@@ -4,7 +4,8 @@ export const color = {
 	darkLightBlue: `#20AEC2`,
 	offBlack: `#1C1C1C`,
 	darkGrey: `#666`,
-	lightGrey: `#aaa`
+	lightGrey: `#aaa`,
+	fluxPurple: `#5f259f`
 }
 
 export const spacing = {

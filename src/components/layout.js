@@ -5,6 +5,7 @@ import Header from "./header"
 import { createGlobalStyle } from "styled-components"
 import { color, spacing, device } from "../styled-components/variables"
 import { VerticalSpace } from '../styled-components/layout'
+import Masthead from '../components/masthead'
 import "typeface-open-sans"
 
 const GlobalStyle = createGlobalStyle`
@@ -42,10 +43,9 @@ const GlobalStyle = createGlobalStyle`
     }
   }
   h1 {
-    font-size: 50px;
-    font-weight: bold;
-    color: ${color.lightBlue};
+    font-size: 3.4rem;
     margin: 0;
+    color: white;
   }
   h2 {
     font-size: 25px;
@@ -76,6 +76,7 @@ const Layout = ({ children }) => {
     <React.Fragment>
       <Header siteTitle={data.site.siteMetadata.title} />
       <GlobalStyle />
+      <Masthead />
       <main>{children}</main>
       <VerticalSpace />
     </React.Fragment>

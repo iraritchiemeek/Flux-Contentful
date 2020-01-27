@@ -133,6 +133,12 @@ export const Button = styled.button`
 `
 
 
+// Flux Site. To delete most of above code in future.
+
+export const Section = styled.section`
+	padding: 5em 0;
+	background: ${props => !props.color ? 'none' : props.color == 'purple' ? 'linear-gradient(#5f259f 20%, #f7aac6 150%)' : ''};
+`
 
 
 
