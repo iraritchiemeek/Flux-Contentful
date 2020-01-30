@@ -1,14 +1,28 @@
 import React from "react"
 import { Section, Wrap } from '../styled-components/layout'
 import { IntroP } from '../styled-components/text'
+import { BLOCKS, MARKS } from '@contentful/rich-text-types';
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
+
+
 
 const Masthead = props => {
+	const {title, description} = props
+
+	if (!title || !description) return null
+
+
+	const options = {
+	  renderNode: {
+	    [BLOCKS.PARAGRAPH]: (node, children) => <IntroP>{children}</IntroP>,
+	  }
+	};
 
 	return (
 		<Section color="purple">
 			<Wrap>
-				<h1>End-to-end energy retailing.</h1>
-				<IntroP>Flux gives you the foundation you need to successfully manage your business, from prospect to pay, and deliver experiences that truly delight your customers and the people who serve them.</IntroP>
+				<h1>{title}</h1>
+				{documentToReactComponents(description.json, options)}
 			</Wrap>
 		</Section>
 	)

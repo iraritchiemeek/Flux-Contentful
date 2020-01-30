@@ -34,8 +34,8 @@ export const NavItem = styled.li`
 	padding: .8em;
 	text-align: center;
 	a, a:visited, a:active {
-		font-size: .9rem;
-		font-weight: 500;
+		font-size: 17px;
+		font-weight: 300;
 		color: white;
 		text-decoration: none;
 	}
@@ -142,7 +142,7 @@ export const Section = styled.section`
 `
 
 export const Wrap = styled.div`
-	max-width: 92%;
+	max-width: 1200px;
 	margin: 0 auto;
 `
 
