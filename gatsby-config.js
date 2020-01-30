@@ -12,6 +12,15 @@ module.exports = {
   plugins: [
     `gatsby-plugin-styled-components`,
     {
+      resolve: "gatsby-source-wordpress",
+      options: {
+        baseUrl: "cms.fluxfederation.com",
+        protocol: "https",
+        hostingWPCOM: false,
+        useACF: true,
+      }
+    },
+    {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: `2v3iy2n1zfbh`,

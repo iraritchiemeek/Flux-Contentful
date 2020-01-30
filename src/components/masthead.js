@@ -11,12 +11,11 @@ const Masthead = props => {
 
 	if (!title || !description) return null
 
-
 	const options = {
 	  renderNode: {
 	    [BLOCKS.PARAGRAPH]: (node, children) => <IntroP>{children}</IntroP>,
 	  }
-	};
+	}
 
 	return (
 		<Section color="purple">

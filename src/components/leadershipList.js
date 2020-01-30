@@ -1,23 +1,26 @@
 import React from "react"
-import { Section, Wrap, FlexContainer, FlexItem } from '../styled-components/layout'
-import { IntroP } from '../styled-components/text'
+import { Section, Wrap, FlexContainer, FlexItem, VerticalSpace} from '../styled-components/layout'
+import { CenterP } from '../styled-components/text'
 import { BLOCKS, MARKS } from '@contentful/rich-text-types';
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
+import Img from "gatsby-image"
+
 
 
 
 const LeadershipList = props => {
 	const {leadership} = props
 
-	console.log(leadership)
-
 	if (!leadership) return null
 
 	const leadershipItem = data => {
 		console.log(data)
 		return (
-			<FlexItem>
-				<p>{data.fullName}</p>
+			<FlexItem width="25%">
+				<Img style={{borderRadius: '50%'}} fluid={data.photo.fluid} />
+				<CenterP><strong>{data.fullName}</strong></CenterP>
+				<CenterP>{data.position}</CenterP>
+				<VerticalSpace space="15px" />
+				<a href="#"><CenterP style={{color: '#ea1e68', fontSize: '14px'}} >{data.email}</CenterP></a>
 			</FlexItem>
 		)
 	}

@@ -30,7 +30,7 @@ const GlobalStyle = createGlobalStyle`
   }
   p {
     color: ${color.offBlack};
-    font-size: 13px;
+    font-size: 18px;
     letter-spacing: 0.01em;
     line-height: 1.7em;
     margin: 0 0 1.2em 0;

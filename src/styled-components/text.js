@@ -5,6 +5,11 @@ export const P = styled.p`
 	margin: ${props => props.margin || `initial`};
 `
 
+export const CenterP = styled(P)`
+    width: 100%;
+    text-align: center;
+`
+
 export const NoSpaceP = styled.p`
 	margin: 0;
 `
