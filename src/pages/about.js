@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import Layout from "../components/layout"
+import LeadershipList from "../components/leadershipList"
 import SEO from "../components/seo"
 import Img from "gatsby-image"
 import { ContentContainer, VerticalSpace, InnerContainer, FlexContainer } from "../styled-components/layout"
@@ -15,7 +16,7 @@ class About extends React.Component {
       <Layout masthead={data.contentfulPage.masthead}>
         <SEO title={data.contentfulPage.title} />
         <ContentContainer>
-
+          <LeadershipList leadership={data.contentfulPage.leadershipPeople} />
         </ContentContainer>
       </Layout>
     )
@@ -34,6 +35,19 @@ export const pageQuery = graphql`
     			json
     		}
     	}
+      leadershipPeople {
+        fullName
+        position
+        email
+        description {
+          json
+        }
+        photo {
+          fluid {
+            ...GatsbyContentfulFluid
+          }
+        }
+      }
     }
   }
 `

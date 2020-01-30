@@ -22,7 +22,8 @@ export const QuoteAuthor = styled(NoSpaceP)`
 `
 
 export const IntroP = styled.p`
-	font-size: 1.25rem;
+    // font-size: 1.25rem;
+	font-size: 23px;
     line-height: 1.6rem;
     color: white;
     margin-top: 1.5rem;

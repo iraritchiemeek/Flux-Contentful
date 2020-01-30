@@ -9,10 +9,11 @@ import { ContentContainer, VerticalSpace, InnerContainer, FlexContainer } from "
 class Index extends React.Component {
   render() {
 
+  	const { data } = this.props
 
     return (
-      <Layout>
-        <SEO title="Home" />
+      <Layout masthead={data.contentfulPage.masthead}>
+        <SEO title={data.contentfulPage.title} />
         <ContentContainer>
 
         </ContentContainer>
@@ -23,3 +24,16 @@ class Index extends React.Component {
 
 export default Index
 
+export const pageQuery = graphql`
+  query {
+    contentfulPage(contentful_id: {eq: "1SuRPyFXVkbyYRCUTFTHEv"}){
+    	title
+    	masthead {
+    		title
+    		description {
+    			json
+    		}
+    	}
+    }
+  }
+`

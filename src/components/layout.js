@@ -43,7 +43,7 @@ const GlobalStyle = createGlobalStyle`
     }
   }
   h1 {
-    font-size: 3.4rem;
+    font-size: 63px;
     margin: 0;
     color: white;
     font-weight: 300;
